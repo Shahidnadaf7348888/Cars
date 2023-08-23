@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="website Icon" type="png" href="CarsPics/PinL2.png"> -->
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+  <!-- Owl carosel  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  <!-- font awosom  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+     /* Home  */
+     .slide-track1 .item{
+    animation: scroll 30s linear infinite;
+    padding: 10px;
+  }
+  .slide-track1 img{
+  width: 100%;
+  transition: transform 1s;
+}
+.slide-track1 img:hover{
+  transform: translateX(40px);
+  transform: scale(1.06);
+  transition: 0.3s;
+}
+
+
+  @keyframes scroll{
+  0%{
+      transform: translateX(0);
+  }
+  100%{
+      transform: translateX(calc(250px *9));
+  }
+}
+
+  .slide-track2 .item{
+    animation: scroll 50s linear infinite;
+    padding: 10px;
+  }
+   @keyframes lide-track2{
+  0%{
+      transform: translateX(0);
+  }
+  100%{
+      transform: translateX(calc(250px *9));
+  }
+}
+
+ 
+  .slide-track2 img{
+  width: 100%;
+  transition: transform 1s;
+}
+.slide-track2 img:hover{
+  transform: translateX(40px);
+  transform: scale(1.06);
+  transition: 0.3s;
+
+
+}
+
+
+
+      #LInx .h3{
+          color: white ;
+      }
+      #LInx p{
+          color: white;
+          font-size: 15px;
+      }
+      #servis i{
+          font-size: 3rem;
+          padding: 10px;
+          color: rgba(182, 142, 11, 0.878);
+      }
+   
+      
+      
+      /* vhicle */
+      #carsdemo a{
+  border: none;
+  box-shadow: .1px .1px 3px black;
+ }
+ #carsdemo Strike{
+  color: rgba(54, 55, 55, 0.811);
+ }
+  #carsdemo img{
+      box-shadow: .1px .1px 4px black;
+  }
+  #carsdemo img:hover{
+      transition: 0.3s;
+      transform: scale(1.02);
+      flex: start;
+  }
+  /* Contact us  */
+  #contact-input{
+background: none;
+box-shadow: .1px .1px 2px white;
+border: none;
+color: white;
+}
+#contact-input::placeholder{
+color: white;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container-fluide sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand ps-5 home-btn"  href="#"><img src="CarsPics/PinL2.png" class=" position-absolute top-0" alt="" style="width: 6rem;" ></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse pe-5 pt-3 pb-3 text-light" id="navbarNav">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link active pe-4 ps-5  home-btn" id="home" aria-current="page" href="#" style="color: white;">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active pe-4 ps-5  about-btn" id="about" aria-current="page" href="#" style="color: white;">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active pe-4 ps-5  Service-btn" id="service" aria-current="page" href="#" style="color: white;">Services</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active pe-4 ps-5  vhicles-btn" id="vhicle" aria-current="page" href="#" style="color: white;">Vhicles</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active pe-4 ps-5  client-btn" id="client" aria-current="page" href="#" style="color: white;">Client</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active pe-4 ps-5  contact-btn" id="contact" aria-current="page" href="#" style="color: white;">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </div>
+<!-- ------------------------------------------------------------------------------------------------------------------------
+                                                Home
+------------------------------------------------------------------------------------------------------------------------ -->
+    <section class="Home">
+        <div class="container-fluide   pt-5" >
+            <div class="row ">
+                <div class="col-md-5 p-5">
+                    <div class="h1" style="font-size: 3rem;">Driving Force Behind <span style="color: rgba(70, 56, 0, 0.876);">Your New Website</span></div>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                </div>
+                <div class="col-md-7  " id="home-car" >
+                    <img src="CarsPics/blk audi.png"  class="w-100" alt="">
+
+                </div>
+            </div>
+        </div>
+        <!-- Second container  -->
+        <div class="container-fluide" style=" background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.6)),url('CarsPics/mihail-comanescu-BSNY06a34uo-unsplash.jpg'); background-size: cover; background-attachment: fixed;" >
+            <div class="row"> 
+                <div class="col-md-12 p-5" >
+                   <div class="h1 w-50" style="filter: drop-shadow(.1px .1px 3px white) ;">It's Easy When LuxeDrive Powers Your Website</div>
+                   <div class="p" style="color: rgba(70, 56, 0, 0.876);">GREAT FEATURES</div>
+                </div>
+            </div>
+            <div class="container " id="LInx">
+                <div class="row p-3" style="border-top:.1px solid white;">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="h3">No Coding Needed</div>
+                        <p>We already did all the coding for you! Simply import the demo & customize away.</p>
+                        <div class="h3">Drag & Drop</div>
+                        <p>The theme is fully compatible with the user-friendly Elementor Page Builder plugin.</p>
+                        <div class="h3">Help Center</div>
+                        <p>Browse Knowledge Base articles, the theme user guide or reach out to our support.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="h3">1-Click Import</div>
+                        <p>You can get the full LuxeDrive demo content with just a single click of your mouse.</p>
+                        
+                        <div class="h3">Customizability</div>
+                        <p>Designed to let you easily alter every single aspect of your new website in no time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Third Container  -->
+        <div class="container-fluide p-5 bg-dark text-light">
+            <div class="h1 w-50">Templates For Presenting Your Fleet & Individual Vehicles</div>
+            <div class="p pb-3" style="color: rgba(70, 56, 0, 0.876);">VEHICLE SHOWCASE</div>
+            <div class="row pt-5" style="border-top: .1px solid white;">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                    <div class="TMPlet owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="CarsPics/l-img-5.jpeg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="CarsPics/l-img-6.jpeg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="CarsPics/l-img-7.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluide pt-5 pb-5">
+            <div class="row pt-5">
+              <div class="col-md-6">
+                <img src="CarsPics/newtiguanblack.png" class="w-100" alt="">
+              </div>
+              <div class="col-md-6">
+                <b class="h1" style="color: rgb(65, 46, 1);">Who We Are</b>
+                <div class="h5 pt-3">We are the authorized Volkswagen car dealers in Bangalore.</div>
+                <div class="pt-5">Volkswagen Bangalore south is part of the KUN Auto Group One of India’s Largest Auto Dealer Group Since inception in 1997, KUN Auto Group has forged reputation as one of the leading dealers across Tamil Nadu, Andhra Pradesh, Kerala & We are stepping into a new beginning in Namma Bengaluru</div>
+              </div>
+            </div>
+          </div>
+          
+
+
+    <div class="container-fluide pt-5 bg-dark">
+        <div class="slide-track1 owl-carousel owl-theme ">
+          <div class="item">
+            <img src="CarsPics/kevin-solbrig-rmpSMnm4c9c-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+                  <img src="CarsPics/dima-panyukov-DwxlhTvC16Q-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+                  <img src="CarsPics/martin-katler-OBkvEbBBIkM-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+                  <img src="CarsPics/spencer-davis-DFnCCRExDdc-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+                  <img src="CarsPics/spencer-davis-v2Co3YthM4k-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+              <img src="CarsPics/damian-barczak-TP1_8CVYOzU-unsplash.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="CarsPics/damian-barczak-6OLDLXpjlhg-unsplash.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="CarsPics/simom-caban-_krnoOtK_Yc-unsplash.jpg" alt="">
+            </div>
+            
+            <div class="item">
+                    <img src="CarsPics/spencer-davis-v2Co3YthM4k-unsplash.jpg" alt="">
+            </div>
+          <div class="item">
+                  <img src="CarsPics/simom-caban-VgkZMLMiGMU-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="CarsPics/kevin-solbrig-rmpSMnm4c9c-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+                  <img src="CarsPics/dima-panyukov-DwxlhTvC16Q-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+                  <img src="CarsPics/martin-katler-OBkvEbBBIkM-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+                  <img src="CarsPics/spencer-davis-DFnCCRExDdc-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+                  <img src="CarsPics/spencer-davis-v2Co3YthM4k-unsplash.jpg" alt="">
+          </div>
+          <div class="item">
+              <img src="CarsPics/damian-barczak-TP1_8CVYOzU-unsplash.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="CarsPics/damian-barczak-6OLDLXpjlhg-unsplash.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="CarsPics/simom-caban-_krnoOtK_Yc-unsplash.jpg" alt="">
+            </div>
+            
+            <div class="item">
+                    <img src="CarsPics/spencer-davis-v2Co3YthM4k-unsplash.jpg" alt="">
+            </div>
+          <div class="item">
+                  <img src="CarsPics/simom-caban-VgkZMLMiGMU-unsplash.jpg" alt="">
+          </div>
+      </div>
+  
+  
+      <!-- second owl  -->
+  
+      <div class="slide-track2 owl-carousel owl-theme pb-5" id="slide-track2">
+        <div class="item">
+          <img src="CarsPics/dhiva-krishna--ewnbsOEeZE-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/anthony-bautista-KhqYRs1hoAk-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/tim-meyer-HuVleogaRVE-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/lawless-capture-24o240bWBUo-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/dhiva-krishna-GRV4ypBKgxE-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/hamza-nouasria-8UFOWr0KVVQ-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/jan-oliver-schwarz-66rlxIX2JeM-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/hamza-nouasria-ioOlgUyePfU-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/omar-ram-0VrJHHQwO_E-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="CarsPics/dhiva-krishna--ewnbsOEeZE-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/anthony-bautista-KhqYRs1hoAk-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/tim-meyer-HuVleogaRVE-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/lawless-capture-24o240bWBUo-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/dhiva-krishna-GRV4ypBKgxE-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/hamza-nouasria-8UFOWr0KVVQ-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/jan-oliver-schwarz-66rlxIX2JeM-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/hamza-nouasria-ioOlgUyePfU-unsplash.jpg" alt="">
+        </div>
+        <div class="item">
+                <img src="CarsPics/omar-ram-0VrJHHQwO_E-unsplash.jpg" alt="">
+        </div>
+    </div>
+      </div>
+  
+
+
+<div class="container-fluide" style="background-image: url('CarsPics/damian-barczak-6OLDLXpjlhg-unsplash.jpg'); background-size: cover; background-attachment: fixed;">
+    <div class="row p-5 ">
+      <div class="col-md-6 ">
+        <div class="container p-5 bg-light" style="border-radius: 8px;">
+          <div class="h2">Are You Looking to TEST DRIVE</div>
+        <div class="pt-3">If you are in Chennai, just drop by and take your future Volkswagen for a test drive. Fill our enquiry form and book a date.</div>
+        <a href="#" class="btn btn-outline-dark mt-2" style="box-shadow: .1px .1px 5px black ;  border: none;">search your car</a>
+        </div>
+        
+      </div>
+      <div class="col-md-6"></div>
+      <div class="col-md-6"></div>
+      <div class="col-md-6 ">
+        <div class="container p-5 bg-light" style="border-radius: 8px ;">
+          <div class="h2">Do You Want <b>SERVICE APPOINTMENT</b></div>
+          <div class="pt-3">If your Volkswagen car is due for a service,no worries. Our service center is right here for you. Fill in our service request and we will contact you shortly</div>
+          <a href="#" class="btn btn-outline-dark mt-2" style="box-shadow: .1px .1px 5px black ;  border: none;">let us know</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+    </section>
+   <!-- ------------------------------------------------------------------------------------------------------------------------
+                                                About
+------------------------------------------------------------------------------------------------------------------------ -->
+    <section class="About">
+
+        <div class="container-fluide" style="background: linear-gradient(rgba(0, 0, 0, .3),rgba(0, 0, 0, .3)),url('CarsPics/morgan-rovang-t38nvd1DF3o-unsplash.jpg');background-size: cover ;background-attachment:fixed ;">
+          <div class="row text-light" style="padding: 7rem 0;">
+            <div class="col-md-12 p-5" >
+              <div class="h1">The new key to automotive success: Put customer experience in the driver’s seat</div>
+            </div>
+        </div>
+        </div>
+      
+      <div class="container">
+        <div class="row p-5">
+          <div class="col-md-12">
+            <div class="h1">Key takeaways</div>
+            <ul>
+            <li class="p-4">Car manufacturers once competed largely on their engineering capabilities: superior driving performance and reliability were their marketing boasts. These qualities still matter, but they are table stakes. The new battleground is customer experience.</li>
+           <li class="p-4">Incumbents will need to commit to bolder change to keep pace with new tech-led, data-rich, electric vehicle manufacturers, leaping from technology-centric product development to customer-centric innovation.    </li>  
+            <li class="p-4">Leadership from the CEO and a chief experience office will be key to establishing the components of a transformation: a new business model, and the ability to scale fast, to amass data at every customer touchpoint, and to measure the customer experience in a manner that reveals precisely how to improve it.  </li> 
+            <hr> 
+          </ul>
+          <h1 style="font-size: 3rem;">Leadership: The CEO must drive the transformation, with the CXO as copilot      </h1>
+          </div>
+          <div class="col-md-6">
+            <h6>OEMs have hitherto thrived largely on their engineering prowess. The customer’s experience, beyond the driving experience itself, has been the responsibility of the marketing and communications team, which might improve touchpoints such as booking a test drive or car handover. Today however, customer experience cannot be just a complementary OEM activity. It has to be the driving force for every department, including product development, IT, quality, and purchasing. That is a huge reorientation for an OEM, which is why the CEO has to drive home the need for change and make it happen.
+      
+              To help them in this regard and to oversee day-to-day work, CEOs should consider appointing a CXO, a position already created by companies renowned for the strength of their customer focus. A few automotive companies—Volkswagen (VW) and General Motors among them—are following suit.
+              
+              Just as the chief quality officer protects product quality and the chief financial officer protects the company’s financial health, the task of the CXO is to protect the end-to-end customer experience. This will mean disrupting the company with new business developments—not refining the status quo. Such a task requires the appointee have not only the trust of the CEO, but also the clout to both drive a transformation and win the support of other C-suite executives.
+              
+              One of the CEO’s primary tasks, meanwhile, is to communicate and act on a clear, bold vision of what the company aspires to be. Adequate funding for the transformation may depend upon it. Different companies will clearly set different aspirations, but all will need to take account of trends afoot, which indicate that the automotive landscape is likely to develop the following attributes by 2030:
+            </h6>
+          </div>
+          <div class="col-md-6">
+            <img src="CarsPics/l-img-1.jpeg" class="w-75" alt="">
+          </div>
+        </div>
+        </div>
+      
+        
+      
+    </section>
+<!-- ------------------------------------------------------------------------------------------------------------------------
+                                                Services
+------------------------------------------------------------------------------------------------------------------------ -->
+    <section class="Services text-light" id="servis">
+        <div class="container-fluide p-5" style="background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.6)),url('CarsPics/simom-caban-VgkZMLMiGMU-unsplash.jpg'); background-size: cover; background-attachment: fixed;">
+            <div class="h1">WHY CHOOSE US</div>
+            <div class="row p-5">
+                <div class="col-md-4">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div class="h3">SAFETY & SECURITY</div>
+                    <div class="p">variations of passages of Lorem Ipsum available, but the majority have</div>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <div class="h3">Online Booking</div>
+                    <div class="p">variations of passages of Lorem Ipsum available, but the majority have</div>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-user-nurse"></i>
+                    <div class="h3">Best Drivers</div>
+                    <div class="p">variations of passages of Lorem Ipsum available, but the majority have</div>
+                </div>
+            </div>
+            <div class="row pb-5">
+                <div class="col-md-3">
+                    
+                    <div class="h3">Subscribe Now</div>
+                    <div class="p">There are many variations of passages of Lorem Ipsum available,</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="h3">Information</div>
+                    <div class="p">There are many variations of passages of Lorem Ipsum available, but the majority</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="h3">Helpful Links</div>
+                    <div class="p">There are many variations of passages of Lorem Ipsum available, but the majority</div>
+                </div>
+                <div class="col-md-3">
+                    <div class="h3">Invesments</div>
+                    <div class="p">There are many variations of passages of Lorem Ipsum available, but the majority</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluide bg-dark">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="h2 p-3 text-center bg-light text-dark" >Services At Your Convenience</div>
+                </div>
+                <div class="col-md-6 text-light">
+                    <img src="CarsPics/girl-346231_640.jpeg" class="w-75 ps-5 pt-5" alt="">
+                    <p class=" p-5">GM Service offers a plethora of car services at the convenience of a tap in Bangalore You can easily schedule a car booking at your suitable time. We offer Free Pick-up and Drop for all the services and assigned a dedicated Service Buddy to make your car services hassle free. You can also add voice instructions for a comfortable pick-up.</p>
+                </div>
+                <div class="col-md-6 pt-5 pb-5">
+                    <img src="CarsPics/auto-2191185_640.jpeg" class="w-100" alt="">
+                </div>
+            </div>
+    </div>
+    </section>
+<!-- ------------------------------------------------------------------------------------------------------------------------
+                                                Vhicles
+------------------------------------------------------------------------------------------------------------------------ -->
+<section class="Vhicles">
+
+
+   
+
+<section class="Vhicles-btns">
+    <div class="container-fluide bg-dark " id="carsdemo">
+      <div class="row p-5">
+          <div class="col-md-4">
+              <div class="card" style="width: 20rem;">
+                  <img src="CarsPics/aaron-huber-8qYE6LGHW-c-unsplash.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Mercedes-Benz C-Class</h5>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i>
+                    <p class="card-text"><Strike>1.2 Crore</Strike>   Rs.60 - 66 Lakh</p>
+                    <div class="text-center">
+                    <a href="#" class="btn btn-outline-dark Buy-btn">Add to card</a>
+                    <a href="#" class="btn btn-outline-dark Buy-btn" style="background-color: orange;">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card" style="width: 20rem;">
+                  <img src="CarsPics/angus-gray-KfXHCi4_us0-unsplash.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Audi A3</h5>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i>
+                    <p class="card-text"><Strike>1.4 Crore</Strike>   Rs.32.12 Lakh</p>
+                    <div class="text-center">
+                    <a href="#" class="btn btn-outline-dark Buy-btn">Add to card</a>
+                    <a href="#" class="btn btn-outline-dark Buy-btn" style="background-color: orange;">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card" style="width: 20rem;">
+                  <img src="CarsPics/conor-samuel-x6uJ5VnFiWk-unsplash.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Audi Q8 e-tron</h5>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <p class="card-text"><Strike>2.09 Crore</Strike>   Rs. 1.14 - 1.26 Crore</p>
+                    <div class="text-center">
+                    <a href="#" class="btn btn-outline-dark Buy-btn">Add to card</a>
+                    <a href="#" class="btn btn-outline-dark Buy-btn" style="background-color: orange;">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          </div>
+          <div class="row p-5">
+          <div class="col-md-4">
+              <div class="card" style="width: 20rem;">
+                  <img src="CarsPics/fernando-marques-dzZV4PpQ-NI-unsplash.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">BMW 2 Series Gran Coupe</h5>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i>
+                    <p class="card-text"><Strike>119.01 Crore</Strike>   Rs. 43.50 - 45.50 Lakh</p>
+                    <div class="text-center">
+                    <a href="#" class="btn btn-outline-dark Buy-btn">Add to card</a>
+                    <a href="#" class="btn btn-outline-dark Buy-btn" style="background-color: orange;">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card" style="width: 20rem;">
+                  <img src="CarsPics/nathan-trampe-GeDrP-52aJU-unsplash.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Audi Q12 e-tron</h5>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i>
+                    <p class="card-text"><Strike>3.01 Crore</Strike>  Rs. 1.22 - 1.26 Crore</p>
+                    <div class="text-center">
+                    <a href="#" class="btn btn-outline-dark Buy-btn">Add to card</a>
+                    <a href="#" class="btn btn-outline-dark Buy-btn" style="background-color: orange">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card" style="width: 20rem;">
+                  <img src="CarsPics/cole-ankney-pOxzrwAjLy8-unsplash.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Audi Q6 e-tron</h5>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i><i class="fa-regular fa-star"></i>
+                    <p class="card-text"><Strike>2.50 Crore</Strike>   Rs. 1.3 - 1.26 Crore</p>
+                    <div class="text-center">
+                    <a href="#" class="btn btn-outline-dark Buy-btn">Add to card</a>
+                    <a href="#" class="btn btn-outline-dark Buy-btn" style="background-color: orange;">Buy now</a>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+  </div>
+  </section>
+  
+  <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+  <!-- Buy -->
+  <section class="Buy">
+
+    <div class="container-fluide bg-dark pb-5 pt-5">
+        <div class="row pt-5 pb-5">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <div class="h1 " style=" color: rgb(185, 162, 6);">Order Now ..!</div>
+            <div class="row">
+              <div class="col-md-12 pt-3 pb-3">
+                <input type="text" class="form-control p-2 " placeholder="Name*" aria-label="Your name" id="contact-input">         
+              </div>
+              <div class="col-md-12 pt-3 pb-3">
+                <input type="text" class="form-control p-2 " placeholder="Email ID*" aria-label="Your Email" id="contact-input">         
+              </div>
+              <div class="col-md-12 pt-3 pb-3">
+                <input type="number" class="form-control p-2" placeholder="Phone Number*" aria-label="Your Number" id="contact-input">         
+              </div>
+              <div class="col-md-12 pt-3 pb-3">
+                <select class="form-select bg-dark text-light" aria-label="Default select example">
+                  <option selected>Model</option>
+                  <option value="1">Mercedes-Benz C-Class</option>
+                  <option value="1">Audi A3</option>
+                  <option value="2">Audi Q8 e-tron</option>
+                  <option value="3">BMW 2 Series Gran Coupe</option>
+                  <option value="3">Audi Q12 e-tron</option>
+                  <option value="3">Audi Q6 e-tron</option>
+                </select>
+              </div>
+              <div class="col-md-12 pt-3 pb-3">
+                <a href="mailto:shahidnadaf2673@gmail.com" class="btn btn-outline-light me-4" type="button" > SUBMIT</a>
+                <a href="#" class="btn btn-outline-danger back-btn " type="button" >Cancel</a>
+              </div>
+            </div>
+          </div>
+           <div class="col-md-3"></div>
+        </div>
+      </div>
+    </section>
+    
+
+    </section>
+<!-- ------------------------------------------------------------------------------------------------------------------------
+                                                Client
+------------------------------------------------------------------------------------------------------------------------ -->
+    <section class="Client">
+      <div class="container-fluide text-light bg-dark">
+        <div class="row p-5">
+            <div class="col-md-6">
+              <img src="CarsPics/chuttersnap-gts_Eh4g1lk-unsplash.jpg" class="w-100 ps-5 pb-3" alt="">
+            </div>
+            <div class="col-md-6">
+                <div class="p pt-5">going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined</div>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col-md-4 pt-5">
+                <div class="h1 pt-5"> Driving Force Behind Your New Website</div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="CarsPics/l-img-3.jpeg" class="w-100 ps-5 pt-5" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="CarsPics/l-img-2.jpeg" class="w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    </section>
+<!-- ------------------------------------------------------------------------------------------------------------------------
+                                                Contact
+------------------------------------------------------------------------------------------------------------------------ -->
+    <section class="Contact">
+        
+<div class="container-fluide bg-dark pb-5 pt-5" style="background-image: url('CarsPics/wes-tindel-ScRM2rv0fjo-unsplash.jpg'); background-size: cover; background-attachment: fixed;">
+    <div class="row pt-5 pb-5">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="h1 text-center" style="color: rgb(152, 122, 4);">CONTACT US</div>
+        <div class="row">
+          <div class="col-md-12 pt-3 pb-3">
+            <input type="text" class="form-control p-2 " placeholder="Name" aria-label="Your name" id="contact-input">         
+          </div>
+          <div class="col-md-12 pt-3 pb-3">
+            <input type="text" class="form-control p-2 " placeholder="Email" aria-label="Your Email" id="contact-input">         
+          </div>
+          <div class="col-md-12 pt-3 pb-3">
+            <input type="number" class="form-control p-2" placeholder="Number" aria-label="Your Number" id="contact-input">         
+          </div>
+          <div class="col-md-12 pt-3 pb-3">
+            <input type="text" class="form-control p-2 pb-5" placeholder="Message" aria-label="Your Number" id="contact-input">         
+          </div>
+          <div class="col-md-12 pt-3 pb-3">
+            <a href="mailto:shahidnadaf2673@gmail.com" class="btn btn-outline-dark " type="button" > SUBMIT</a>
+          </div>
+        </div>
+      </div>
+       <div class="col-md-3"></div>
+    </div>
+  </div>
+    </section>
+
+
+    <div class="container-fluide bg-dark text-light pt-5" >
+        <div class="row p-5" style="border-top: .3px solid rgba(255, 255, 255, 0.531);">
+          <div class="col-md-3">
+            <div class="h4" style="color: rgb(171, 121, 4);"><ul>Information</ul></div>
+            <div class="pt-4">There are many variations of passages of Lorem Ipsum available, but the majority</div>
+            
+          </div>
+          <div class="col-md-3">
+            <div class="h4" style="color: rgb(171, 121, 4);">Invesments</div>
+            <div class="pt-4">There are many variations of passages of Lorem Ipsum available, but the majority</div>
+          </div>
+          <div class="col-md-3">
+            <div class="h4 footer-Links" style="color: rgb(171, 121, 4);"><u> Short cut </u> </div>
+            <a href="#" class="pt-2 home-btn" style="text-decoration: none; color: white;" ><b>Home</b></a> <br>
+            <a href="#" class="pt-2 contact-btn" style="text-decoration: none; color: white;" ><b>Contact us</b></a> <br>
+            <a href="#" class="pt-2 about-btn" style="text-decoration: none; color: white;" ><b>About</b></a> <br>
+            <a href="#" class="pt-2 vhicles-btn"  style="text-decoration: none; color: white;"><b>Vhicles</b></a>
+            </div>
+          <div class="col-md-3">
+            <div class="h4" style="color: rgb(171, 121, 4);">Subscribe Now</div>
+            <div class="pt-4">There are many variations of passages of Lorem Ipsum available,      </div>
+            <input type="text" class="form-control mt-3 " placeholder="Email ID*" aria-label="Your Email" id="" style="color: white;background: none; ">         
+            <a href="mailto:shahidnadaf2673@gmail.com" class="btn btn-outline-primary mt-4 me-4" type="button" > SUBMIT</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="container-fluide">
+        <div class="p-2 ps-4 bg-light ">Created @2023 All rights reserved [This template is made by Mr.Shahid-Nadaf</div>
+      </div>
+    <!-- owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+    <script>
+        $(document).ready( ()=>{
+            $(".About").hide();
+            $(".Services").hide();
+            $(".Vhicles").hide();
+            $(".Client").hide();
+            $(".Contact").hide();
+
+
+            $(".home-btn").click( ()=>{
+            $(".About").hide();
+            $(".Services").hide();
+            $(".Vhicles").hide();
+            $(".Client").hide();
+            $(".Contact").hide();
+            $(".Home").show();
+            document.querySelector('.home-btn').style.color= 'rgb(181, 136, 2)';
+            document.querySelector('.about-btn').style.color='white'
+            document.querySelector('.Service-btn').style.color='white'
+            document.querySelector('.vhicles-btn').style.color='white'
+            document.querySelector('.client-btn').style.color='white'
+            document.querySelector('.contact-btn').style.color='white'
+            });
+            $(".about-btn").click( ()=>{
+            $(".About").show();
+            $(".Services").hide();
+            $(".Vhicles").hide();
+            $(".Client").hide();
+            $(".Contact").hide();
+            $(".Home").hide();
+            
+            document.querySelector('.home-btn').style.color= 'white';
+            document.querySelector('.about-btn').style.color='rgb(181, 136, 2)'
+            document.querySelector('.Service-btn').style.color='white'
+            document.querySelector('.vhicles-btn').style.color='white'
+            document.querySelector('.client-btn').style.color='white'
+            document.querySelector('.contact-btn').style.color='white'
+
+            });
+            $(".Service-btn").click( ()=>{
+            $(".About").hide();
+            $(".Services").show();
+            $(".Vhicles").hide();
+            $(".Client").hide();
+            $(".Contact").hide();
+            $(".Home").hide();
+            document.querySelector('.home-btn').style.color= 'white';
+            document.querySelector('.about-btn').style.color='white'
+            document.querySelector('.Service-btn').style.color='rgb(181, 136, 2)'
+            document.querySelector('.vhicles-btn').style.color='white'
+            document.querySelector('.client-btn').style.color='white'
+            document.querySelector('.contact-btn').style.color='white'
+            });
+            $(".vhicles-btn").click( ()=>{
+            $(".About").hide();
+            $(".Services").hide();
+            $(".Vhicles").show();
+            $(".Client").hide();
+            $(".Contact").hide();
+            $(".Home").hide();
+            document.querySelector('.home-btn').style.color= 'white';
+            document.querySelector('.about-btn').style.color='white'
+            document.querySelector('.Service-btn').style.color='white'
+            document.querySelector('.vhicles-btn').style.color='rgb(181, 136, 2)'
+            document.querySelector('.client-btn').style.color='white'
+            document.querySelector('.contact-btn').style.color='white'
+            });
+            $(".client-btn").click( ()=>{
+            $(".About").hide();
+            $(".Services").hide();
+            $(".Vhicles").hide();
+            $(".Client").show();
+            $(".Contact").hide();
+            $(".Home").hide();
+            document.querySelector('.home-btn').style.color= 'white';
+            document.querySelector('.about-btn').style.color='white'
+            document.querySelector('.Service-btn').style.color='white'
+            document.querySelector('.vhicles-btn').style.color='white'
+            document.querySelector('.client-btn').style.color='rgb(181, 136, 2)'
+            document.querySelector('.contact-btn').style.color='white'
+            });
+            $(".contact-btn").click( ()=>{
+            $(".About").hide();
+            $(".Services").hide();
+            $(".Vhicles").hide();
+            $(".Client").hide();
+            $(".Contact").show();
+            $(".Home").hide();
+            document.querySelector('.home-btn').style.color= 'white';
+            document.querySelector('.about-btn').style.color='white'
+            document.querySelector('.Service-btn').style.color='white'
+            document.querySelector('.vhicles-btn').style.color='white'
+            document.querySelector('.client-btn').style.color='white'
+            document.querySelector('.contact-btn').style.color='rgb(181, 136, 2)'
+            });
+
+        });
+    </script>
+
+<!-- Buy  -->
+<script>
+    $(document).ready(()=>{
+      $(".Buy").hide();
+
+      $(".Buy-btn").click(()=>{
+        $(".Buy").show();
+        $(".Vhicles-btns").hide();
+      })
+      $(".back-btn").click(()=>{
+        $(".Buy").hide();
+        $(".Vhicles-btns").show();
+      })
+    })
+  </script>
+
+
+
+<!-- Ovle carosel -->
+<script>
+    $('.TMPlet').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dots:true,
+    autoplay:true,
+    autoplayTimeout:1200,
+    animation:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+
+    $('.slide-track1').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+
+
+
+// owl owlCarousel 2
+
+$(' .slide-track2').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    loop:true,
+    
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:6
+        }
+    }
+})
+
+
+
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
